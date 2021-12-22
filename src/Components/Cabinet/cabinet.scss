@@ -1,0 +1,113 @@
+@import "../../index.scss";
+
+.cabinet {
+  header {
+    width: 100%;
+    height: 60px;
+    padding: 0 1.5rem;
+    position: fixed;
+    align-items: center;
+    background-color: #555b6e;
+
+    h4,
+    h6 {
+      color: $light;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      & > li {
+        position: relative;
+        align-items: center;
+
+        img {
+          margin: 0 0.5rem 0 0;
+          border-radius: 50%;
+        }
+
+        ul {
+          width: 100%;
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          border-radius: 0.5rem;
+          background-color: $light;
+          overflow: hidden;
+
+          li {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #faf9f9;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgba($color: $primary, $alpha: 0.1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    height: 100vh;
+    align-items: stretch;
+
+    nav {
+      // width: 4.5rem;
+      padding: 6rem 0 0 0;
+      background-color: #fff;
+      overflow: hidden;
+
+      a {
+        padding: 1.5rem;
+        justify-content: flex-start;
+        transition: 0.3s;
+        cursor: pointer;
+
+        svg {
+          width: 1.5rem;
+          margin: 0 2rem 0 0;
+        }
+
+        &:hover {
+          background-color: rgba($color: $secondary, $alpha: 0.8);
+        }
+      }
+    }
+
+    & > div {
+      width: 100%;
+      padding: 60px 0 0 0;
+
+      section {
+          margin: 1.5rem;
+        flex-grow: 1;
+        background-color: #fff;
+      }
+
+      footer {
+        height: 80px;
+        padding: 0 1.5rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #555b6e;
+
+        * {
+          color: #faf9f9;
+        }
+
+        a {
+          margin: 0 0.8rem;
+        }
+
+        .row {
+          margin: 0 0 1rem 0;
+        }
+      }
+    }
+  }
+}
