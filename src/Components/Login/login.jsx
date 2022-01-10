@@ -18,7 +18,7 @@ export default function Login() {
                 document.cookie = 'Exit=true';
                 
             document.cookie = 'SignIn=true';
-            history("/");
+            history("/chat");
         }
     }
 

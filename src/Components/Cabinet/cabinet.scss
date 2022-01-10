@@ -1,6 +1,14 @@
 @import "../../index.scss";
 
 .cabinet {
+  .menu {
+    width: 1.5rem;
+    display: none;
+    fill: $light;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
   header {
     width: 100%;
     height: 60px;
@@ -21,10 +29,31 @@
       & > li {
         position: relative;
         align-items: center;
+        cursor: pointer;
+
+        h6 {
+          margin: 0 1rem 0 0;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            border: 0.3rem solid transparent;
+            border-top: 0.3rem solid $light;
+          }
+        }
 
         img {
           margin: 0 0.5rem 0 0;
           border-radius: 50%;
+        }
+
+        &:hover {
+          ul {
+            display: block;
+          }
         }
 
         ul {
@@ -41,7 +70,6 @@
             padding: 1rem 1.5rem;
             border-bottom: 1px solid #faf9f9;
             transition: 0.3s;
-            cursor: pointer;
 
             &:hover {
               background-color: rgba($color: $primary, $alpha: 0.1);
@@ -57,24 +85,44 @@
     align-items: stretch;
 
     nav {
-      // width: 4.5rem;
+      width: 4rem;
       padding: 6rem 0 0 0;
       background-color: #fff;
       overflow: hidden;
+      justify-content: space-between;
+      transition: 0.3s;
+
+      &:hover {
+        width: 18.5rem;
+
+        a {
+          width: 100%;
+        }
+      }
+
+      .profile {
+        display: none;
+      }
 
       a {
-        padding: 1.5rem;
+        width: max-content;
+        padding: 1.2rem;
         justify-content: flex-start;
+        align-items: center;
         transition: 0.3s;
         cursor: pointer;
 
         svg {
           width: 1.5rem;
-          margin: 0 2rem 0 0;
+          margin: 0 1.5rem 0 0;
         }
 
         &:hover {
           background-color: rgba($color: $secondary, $alpha: 0.8);
+
+          svg {
+            fill: $light;
+          }
         }
       }
     }
@@ -84,7 +132,8 @@
       padding: 60px 0 0 0;
 
       section {
-          margin: 1.5rem;
+        margin: 1.5rem;
+        padding: 1rem;
         flex-grow: 1;
         background-color: #fff;
       }
@@ -106,6 +155,59 @@
 
         .row {
           margin: 0 0 1rem 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and(max-width: 500px) {
+    .menu {
+      display: block;
+    }
+
+    header {
+      ul {
+        display: none;
+      }
+    }
+
+    main {
+      nav {
+        width: 95vw;
+        height: calc(100vh - 60px);
+        padding: 1rem 0;
+        position: fixed;
+        bottom: 0;
+        right: -100%;
+
+        &.show {
+          right: 0;
+        }
+
+        &:hover {
+          width: 95vw;
+        }
+
+        .profile {
+          padding: 1.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          img {
+            margin: 0 1rem 0 0;
+            border-radius: 50%;
+          }
+        }
+
+        a {
+          font-size: 1rem;
+        }
+      }
+
+      & > div {
+        section {
+          margin: 0.5rem;
         }
       }
     }
