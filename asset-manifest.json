@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Binerals/static/css/main.8600e2fa.css",
-    "main.js": "/Binerals/static/js/main.2fcc0427.js",
+    "main.js": "/Binerals/static/js/main.85e79b95.js",
     "index.html": "/Binerals/index.html",
     "main.8600e2fa.css.map": "/Binerals/static/css/main.8600e2fa.css.map",
-    "main.2fcc0427.js.map": "/Binerals/static/js/main.2fcc0427.js.map"
+    "main.85e79b95.js.map": "/Binerals/static/js/main.85e79b95.js.map"
   },
   "entrypoints": [
     "static/css/main.8600e2fa.css",
-    "static/js/main.2fcc0427.js"
+    "static/js/main.85e79b95.js"
   ]
 }
