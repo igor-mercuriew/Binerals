@@ -1,0 +1,38 @@
+@import "../../index.scss";
+
+.toast {
+  min-width: 250px;
+  max-width: 350px;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 100;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.error{
+    color: $light;
+    background-image: linear-gradient(-35deg, rgb(177, 17, 17) 0, rgb(248, 72, 72) 100%);
+  }
+
+  &.success{
+    color: $light;
+    background-image: linear-gradient(-35deg, rgb(0, 123, 43) 0, rgb(26, 162, 49)100%);
+  }
+
+  @media only screen and(max-width: 500px) {
+    min-width: 95%;
+    max-width: 95%;
+    right: 2.5%;
+  }
+}

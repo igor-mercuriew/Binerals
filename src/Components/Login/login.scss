@@ -78,16 +78,3 @@
         }
     }
 }
-
-.toast{
-    padding: 1rem;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    color: $light;
-    letter-spacing: 0.1rem;
-    background-color: $warning;
-    border-radius: 0.3rem;
-    transition: 0.3s;
-    opacity: 0;
-}

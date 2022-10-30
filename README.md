@@ -15,5 +15,5 @@ SPA состоит из страницы логина и чатов.
 7.	Сайдбар должен скрываться и раскрыватся по нажатию на кнопку, можно использовать js, можно сделать без него. 
 8.	Юзер меню открывается по наведению. 
 
-Сылка на дизайн в Figma: https://www.figma.com/file/XMQsI1K4jd2VFTuDUv7jyn/React.js-test-tack-Binerals
+Ссылка на дизайн в Figma: https://www.figma.com/file/XMQsI1K4jd2VFTuDUv7jyn/React.js-test-tack-Binerals
 Ответ расположить на своем github аккаунте
